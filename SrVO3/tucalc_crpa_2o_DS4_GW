@@ -1,0 +1,7 @@
+# QP energies E in eV
+# Format:
+#     kpoint
+#     number of bands computed
+#     band index, Re(E), E-E0, Im(E)
+
+64 1 # nkptgw, nsppol
