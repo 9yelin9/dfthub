@@ -18,7 +18,7 @@ occopt    7          #OCCupation OPTion
 tsmear    3000 K     #Temperature of SMEARing
 #
 ##### PHYSICAL PARAMETERS
-structure "poscar:POSCAR"
+structure "poscar:Pt.poscar"
 
 ngkpt   4 4 4    #K - PoinTs grid : Real space LATTice
 nshiftk 1        #No shif
@@ -37,12 +37,12 @@ getden2    1
 nbandkss2  2
 kssform2   1
 
-pawfatbnd2  2
+pawfatbnd2  1
 
 #Parameters (to uncomment) for bands structure
 iscf2       -2 
 kptopt2     -4
-ndivk2      102 51 36 110
+ndivsm2     20
 kptbounds2  0.0 0.0 0.0 #G
             0.5 0.0 0.5 #X
             0.5 0.25 0.75 #W
