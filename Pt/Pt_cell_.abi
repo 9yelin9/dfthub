@@ -1,0 +1,19 @@
+pawprtvol 3
+nsym 1
+
+# CONVERGENCE PARAMETERS
+nstep     40
+ecut      12.0    # Maximal kinetic energy cut-off, in Hartree
+pawecutdg 20.0    # (60)PAW - Energy CUToff for the Double Grid ( need only when usepaw=1=)
+tolwfr    1.0d-16
+occopt    7       # OCCupation OPTion (7: Gaussian)
+tsmear    3000 K  # Temperature of SMEARing
+
+# PHYSICAL PARAMETERS
+structure "poscar:POSCAR"
+
+ngkpt   4 4 4       # K - PoinTs grid : Real space LATTice
+nshiftk 1           # No shif
+
+pp_dirpath "$ABI_HOME/JTH-LDA-atomicdata-1.1/ATOMICDATA/"
+pseudos "Pt.LDA_PW-JTH.xml"
