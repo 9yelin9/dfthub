@@ -46,7 +46,7 @@ kptbounds2  0.0 0.0 0.0 #G
             0.0 0.0 0.0 #G
 
 # PAW
-pawfatbnd2 1 # print band structure in the FAT-BaND representation (1: only L, 2: L and M)
+pawfatbnd2 2 # print band structure in the FAT-BaND representation (1: only L, 2: L and M)
 
 # GW
 nbandkss2 30 # Number of BANDs in the KSS file
