@@ -22,7 +22,7 @@ nshiftk 1 # No shif
 shiftk  0.5 0.5 0.0
 
 # GS
-nspinor 2 # Number of SPINORial components of the wavefunctions
+nspinor 1 # Number of SPINORial components of the wavefunctions
 
 # PAW
 pawecutdg 60.0 # PAW - Energy CUToff for the Double Grid

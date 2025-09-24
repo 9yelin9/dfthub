@@ -9,7 +9,9 @@
 t0=$(date +%s.%N)
 t0_string=$(date)
 
-mpirun -np 20 abinit $1
+cd $(dirname "$1") || exit 1
+mpirun -np 20 abinit $(basename "$1")
+cd -
 
 t1=$(date +%s.%N)
 t1_string=$(date)

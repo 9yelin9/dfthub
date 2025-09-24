@@ -1,5 +1,5 @@
 # Basics
-structure "poscar:POSCAR"
+structure "poscar:Pt_SOC/POSCAR"
 nsym 1 # Number fo SYMmetry operations (1: no sym; only indentity)
 nsppol 1 # Number of SPin POLarization
 
@@ -9,7 +9,7 @@ tolwfr 1.0d-16 # SCF convergence
 occopt 7 # OCCupation OPTion (7: Gaussian)
 tsmear 3000 K # Temperature of SMEARing
 
-nband   30 # Number of BANDs
+nband   40 # Number of BANDs
 kptopt  3 # KPoinTs OPTion (3: rely on ngkpt, nshiftk and shiftk; do not consider any sym)
 ngkpt   4 4 1 # K - PoinTs grid : Real space LATTice
 nshiftk 1 # No shift
