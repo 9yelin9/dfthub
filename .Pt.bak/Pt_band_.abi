@@ -1,0 +1,53 @@
+# ----------------------------------------------------------------------------------
+ndtset 2
+jdtset 1 2
+getden -1
+pawprtvol 3
+
+#==================================================================================
+############ Parameters common to all DATASETS
+#==================================================================================
+##### CONVERGENCE PARAMETERS
+nstep     40
+nline     3          #Number of LINE minimisations
+nnsclo    3          #Number of Non-Self Consistent LOops
+ecut      12.0        # Maximal kinetic energy cut-off, in Hartree
+pawecutdg 20.0        #(60)PAW - Energy CUToff for the Double Grid ( need only when usepaw=1=)
+tolwfr    1.0d-16
+occopt    7          #OCCupation OPTion
+tsmear    3000 K     #Temperature of SMEARing
+#
+##### PHYSICAL PARAMETERS
+structure "poscar:Pt.poscar"
+
+ngkpt   4 4 4    #K - PoinTs grid : Real space LATTice
+nshiftk 1        #No shif
+shiftk  0.5 0.5 0.5
+istwfk *1
+
+#For all the dataset
+nsym 1
+nband 30
+
+#==================================================================================
+############ SECOND DATASET: Compute band structure with fatbands
+#==================================================================================
+
+getden2    1
+nbandkss2  2
+kssform2   1
+
+pawfatbnd2  1
+
+#Parameters (to uncomment) for bands structure
+iscf2       -2 
+kptopt2     -4
+ndivsm2     20
+kptbounds2  0.0 0.0 0.0 #G
+            0.5 0.0 0.5 #X
+            0.5 0.25 0.75 #W
+            0.375 0.375 0.75 #K
+            0.0 0.0 0.0 #G
+
+ pp_dirpath "$ABI_HOME/JTH-LDA-atomicdata-1.1/ATOMICDATA/"
+ pseudos "Pt.LDA_PW-JTH.xml"

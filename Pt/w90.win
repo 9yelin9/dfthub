@@ -1,0 +1,16 @@
+num_wann 5
+num_iter 200
+
+begin projections
+	Pt : d
+end projections
+
+write_hr = true
+
+bands_plot = true
+begin kpoint_path
+    G 0.0 0.0 0.0 X 0.5 0.0 0.0
+    X 0.5 0.0 0.0 M 0.5 0.5 0.0
+    M 0.5 0.5 0.0 G 0.0 0.0 0.0
+end kpoint_path
+bands_num_points = 300

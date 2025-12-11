@@ -1,0 +1,473 @@
+  ABINIT 10.4.7-d
+  
+ABI_HOME  found in environment, with value /home/yerin/abinit-10.4.7
+-instrng: 53 lines of input have been read from file Pt_band_.abi
+ 
+
+.Version 10.4.7-d of ABINIT, released Sep 2025.
+.(MPI version, prepared for a x86_64_linux_intel2021.6 computer) 
+
+.Copyright (C) 1998-2025 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Wed 17 Sep 2025.
+- ( at 16h25 )
+  
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ === Build Information === 
+  Version       : 10.4.7-d
+  Build target  : x86_64_linux_intel2021.6
+  Build date    : 20250912
+ 
+ === Compiler Suite === 
+  C compiler       : intel2021.6
+  C++ compiler     : gnu2021.6
+  Fortran compiler : intel2021.6
+  CFLAGS           : -g -O2
+  CXXFLAGS         : -g -O2 -march=native
+  FCFLAGS          : -g -extend-source -nofpscomp      -I/home/yerin/abinit-10.4.7/fallb ...
+  FC_LDFLAGS       : 
+ 
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : intel_xeon
+ 
+ === Multicore === 
+  Parallel build : 
+  Parallel I/O   : 
+  openMP support : 
+  GPU support    : @with_gpu@
+ 
+ === Connectors / Fallbacks === 
+  LINALG flavor  : mkl
+  FFT flavor     : dfti
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : no
+ 
+ === Experimental features === 
+  Exports             : @enable_exports@
+  GW double-precision : 
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O3
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                  CC_INTEL                   CXX_GNU                  FC_INTEL
+ 
+                 HAVE_DFTI HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC
+ 
+  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE        HAVE_FC_CONTIGUOUS
+ 
+           HAVE_FC_CPUTIME              HAVE_FC_EXIT             HAVE_FC_FLUSH
+ 
+             HAVE_FC_GAMMA   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS
+ 
+             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING  HAVE_FC_ISO_FORTRAN_2008
+ 
+        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC  HAVE_FC_ON_THE_FLY_SHAPE
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED           HAVE_FC_SHIFTLR
+ 
+         HAVE_FC_STREAM_IO                 HAVE_HDF5             HAVE_HDF5_MPI
+ 
+        HAVE_LIBPAW_ABINIT      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC
+ 
+         HAVE_LINALG_AXPBY        HAVE_LINALG_GEMM3M         HAVE_LINALG_GEMMT
+ 
+  HAVE_LINALG_MKL_IMATCOPY   HAVE_LINALG_MKL_OMATADD  HAVE_LINALG_MKL_OMATCOPY
+ 
+   HAVE_LINALG_MKL_THREADS     HAVE_LINALG_SCALAPACK                  HAVE_MPI
+ 
+                 HAVE_MPI2         HAVE_MPI2_INPLACE       HAVE_MPI_IALLGATHER
+ 
+       HAVE_MPI_IALLREDUCE        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV
+ 
+           HAVE_MPI_IBCAST         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16
+ 
+               HAVE_MPI_IO HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF
+ 
+       HAVE_NETCDF_FORTRAN   HAVE_NETCDF_FORTRAN_MPI           HAVE_NETCDF_MPI
+ 
+                HAVE_NUMPY             HAVE_OS_LINUX         HAVE_TIMER_ABINIT
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> Pt_band_.abi
+- output file    -> Pt_band_.abo
+- root for input  files -> Pt_band_i
+- root for output files -> Pt_band_o
+ 
+ abinit : after writing the name of files
+ Netcdf library supports MPI-IO
+ABI_HOME  found in environment, with value /home/yerin/abinit-10.4.7
+-instrng: 53 lines of input have been read from file Pt_band_.abi
+ 
+ For atom type 1, psp file is /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Pt.LDA_PW-JTH.xml
+- inpspheads : Reading pseudopotential header in XML form from 
+-   /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Pt.LDA_PW-JTH.xml
+ 
+ inpspheads: deduce mpsang = 3, n1xccc = 1.
+
+======================================================= 
+ invars1m : enter jdtset= 1
+ Initializing lattice and positions from: poscar:Pt.poscar
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+ 
+ symlatt: the Bravais lattice is cP (primitive cubic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1300
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  7, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+ 
+ 
+ symlatt: the Bravais lattice is mC (one-face-centered monoclinic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1309
+message: |
+    The Bravais lattice determined from modified primitive
+    vectors, bravais(1)=  2, has a lower symmetry than before,
+    but is still more symmetric than the real one, iholohedry=  1
+    obtained by taking into account the atomic positions.
+...
+ 
+ 
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+
+======================================================= 
+ invars1m : enter jdtset= 2
+ Initializing lattice and positions from: poscar:Pt.poscar
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+ 
+ symlatt: the Bravais lattice is cP (primitive cubic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1300
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  7, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+ 
+ 
+ symlatt: the Bravais lattice is mC (one-face-centered monoclinic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1309
+message: |
+    The Bravais lattice determined from modified primitive
+    vectors, bravais(1)=  2, has a lower symmetry than before,
+    but is still more symmetric than the real one, iholohedry=  1
+    obtained by taking into account the atomic positions.
+...
+ 
+ 
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+ 
+--- !WARNING
+src_file: m_parser.F90
+src_line: 433
+message: |
+    Attempted to read ndig: 10 floating point digits,
+    from string(1:ndig): `PP_DIRPATH` to initialize a floating variable.
+    iomsg: list-directed I/O syntax error, unit -5, file Internal List-Directed Read
+...
+ 
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AB41A71A28B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB41D15C3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AC3C459528B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC3C6FD73D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AE03DB8528B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE0405C73D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B300DF0828B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B301094A3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B553542028B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B5537E623D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+ 
+--- !ERROR
+src_file: m_parser.F90
+src_line: 2085
+mpi_rank: 0
+message: |
+    An error occurred reading data for keyword ` KPTBOUNDS2`,
+    looking for 33 elements.
+    There is a problem with the input string:
+     PP_DIRPATH "/home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/" PSEUDOS "Pt.LDA_PW-JTH.xml"
+    Maybe a disagreement between the declared dimension of the array,
+    and the number of items provided. 
+    Action: correct your input file and especially the keyword:  KPTBOUNDS2
+...
+ 
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B50DFEC228B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B50E29043D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B911AE1728B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B911D8593D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AC31393128B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC3163733D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002ACF4438828B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACF46DCA3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B6DB706728B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6DB9AA93D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AFFF506228B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AFFF7AA43D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AB9EA36828B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB9ECDAA3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B5A7800C28B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B5A7AA4E3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B9D5D12A28B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9D5FB6C3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B4F547D328B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4F572153D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B59CA40A28B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B59CCE4C3D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B64849FF28B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B64874413D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B9B3470528B  tracebackqq_          Unknown  Unknown
+abinit             000000000307EA64  Unknown               Unknown  Unknown
+abinit             0000000002A2E9CB  Unknown               Unknown  Unknown
+abinit             0000000002A389E0  Unknown               Unknown  Unknown
+abinit             0000000002166534  Unknown               Unknown  Unknown
+abinit             0000000002083553  Unknown               Unknown  Unknown
+abinit             0000000002070050  Unknown               Unknown  Unknown
+abinit             0000000001891262  Unknown               Unknown  Unknown
+abinit             0000000000410FCA  Unknown               Unknown  Unknown
+abinit             000000000040FE12  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9B371473D5  __libc_start_main     Unknown  Unknown
+abinit             000000000040FD29  Unknown               Unknown  Unknown
+Abort(13) on node 7 (rank 7 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 13) - process 7
+
+# Time Start   : Wed Sep 17 16:25:09 KST 2025
+# Time End     : Wed Sep 17 16:25:10 KST 2025
+# Time Elapsed : 0h 0m 1.029978304s
+

@@ -1,0 +1,37 @@
+# Basics
+structure "poscar:Pt_SOC/POSCAR"
+nsym 1 # Number fo SYMmetry operations (1: no sym; only indentity)
+nsppol 1 # Number of SPin POLarization
+
+nstep  40 # SCF steps
+ecut   15.0 # Maximal kinetic energy cut-off, in Hartree
+tolwfr 1.0d-16 # SCF convergence
+occopt 7 # OCCupation OPTion (7: Gaussian)
+tsmear 3000 K # Temperature of SMEARing
+
+nband   40 # Number of BANDs
+kptopt  3 # KPoinTs OPTion (3: rely on ngkpt, nshiftk and shiftk; do not consider any sym)
+ngkpt   4 4 1 # K - PoinTs grid : Real space LATTice
+nshiftk 1 # No shift
+shiftk  0.5 0.5 0.0
+
+# GS
+nspinor 2 # Number of SPINORial components of the wavefunctions
+
+# PAW
+pawecutdg 30.0 # PAW - Energy CUToff for the Double Grid
+pawprtvol 3
+
+# Relaxation
+optcell 9
+ionmov 2
+geoopt "bfgs"
+ntime 10
+#chkdilatmx 1
+dilatmx 1.05
+ecutsm 0.5
+tolmxf 5.0d-5
+
+# File-handling
+pp_dirpath "$ABI_HOME/JTH-LDA-atomicdata-1.1/ATOMICDATA/"
+pseudos "Pt.LDA_PW-JTH.xml"

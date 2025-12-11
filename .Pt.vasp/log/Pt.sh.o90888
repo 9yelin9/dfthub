@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/yerin/dfthub/Pt/./run.py", line 74, in <module>
+    else: run()
+          ^^^^^
+  File "/home/yerin/dfthub/Pt/./run.py", line 68, in run
+    atoms.get_potential_energy()
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/atoms.py", line 755, in get_potential_energy
+    energy = self._calc.get_potential_energy(self)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/calculators/abc.py", line 24, in get_potential_energy
+    return self.get_property(name, atoms)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/calculators/calculator.py", line 538, in get_property
+    self.calculate(atoms, [name], system_changes)
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/calculators/genericfileio.py", line 322, in calculate
+    self.template.execute(self.directory, self.profile)
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/calculators/espresso.py", line 84, in execute
+    profile.run(directory, self.inputname, self.outputname,
+  File "/home/yerin/.local/lib/python3.12/site-packages/ase/calculators/genericfileio.py", line 93, in run
+    check_call(
+  File "/APP/enhpc/miniconda3/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['mpirun', '-n', '4', 'pw.x', '-in', 'espresso.pwi']' returned non-zero exit status 28.
+
+# Time Start   : Thu Sep 11 18:43:24 KST 2025
+# Time End     : Thu Sep 11 18:43:54 KST 2025
+# Time Elapsed : 0h 0m 29.599965757s
+
