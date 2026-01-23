@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -S /bin/bash
-#$ -q all.q
-#$ -pe mpi 20
+#$ -q all.q@node04
+#$ -pe mpi 1
 #$ -j y
 #$ -cwd
 #$ -o log/
@@ -10,7 +10,7 @@ t0=$(date +%s.%N)
 t0_string=$(date)
 
 cd $(dirname "$1") || exit 1
-mpirun -np 20 abinit $(basename "$1")
+mpirun -np 1 abinit $(basename "$1")
 cd -
 
 t1=$(date +%s.%N)

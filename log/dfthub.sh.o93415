@@ -1,0 +1,1631 @@
+  ABINIT 10.4.7-d
+  
+ABI_HOME  found in environment, with value /home/yerin/abinit-10.4.7
+-instrng: 63 lines of input have been read from file Li_band1_.abi
+ 
+
+.Version 10.4.7-d of ABINIT, released Sep 2025.
+.(MPI version, prepared for a x86_64_linux_intel2021.6 computer) 
+
+.Copyright (C) 1998-2025 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Wed 21 Jan 2026.
+- ( at 17h58 )
+  
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ === Build Information === 
+  Version       : 10.4.7-d
+  Build target  : x86_64_linux_intel2021.6
+  Build date    : 20250926
+ 
+ === Compiler Suite === 
+  C compiler       : intel2021.6
+  C++ compiler     : gnu2021.6
+  Fortran compiler : intel2021.6
+  CFLAGS           : -g -O2
+  CXXFLAGS         : -g -O2 -march=native
+  FCFLAGS          : -g -extend-source -nofpscomp      -I/home/yerin/abinit-10.4.7/fallb ...
+  FC_LDFLAGS       : 
+ 
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : intel_xeon
+ 
+ === Multicore === 
+  Parallel build : 
+  Parallel I/O   : 
+  openMP support : 
+  GPU support    : @with_gpu@
+ 
+ === Connectors / Fallbacks === 
+  LINALG flavor  : mkl
+  FFT flavor     : dfti
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : yes
+ 
+ === Experimental features === 
+  Exports             : @enable_exports@
+  GW double-precision : 
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O3
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                  CC_INTEL                   CXX_GNU                  FC_INTEL
+ 
+                 HAVE_DFTI HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC
+ 
+  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE        HAVE_FC_CONTIGUOUS
+ 
+           HAVE_FC_CPUTIME              HAVE_FC_EXIT             HAVE_FC_FLUSH
+ 
+             HAVE_FC_GAMMA   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS
+ 
+             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING  HAVE_FC_ISO_FORTRAN_2008
+ 
+        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC  HAVE_FC_ON_THE_FLY_SHAPE
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED           HAVE_FC_SHIFTLR
+ 
+         HAVE_FC_STREAM_IO                 HAVE_HDF5             HAVE_HDF5_MPI
+ 
+        HAVE_LIBPAW_ABINIT      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC
+ 
+         HAVE_LINALG_AXPBY        HAVE_LINALG_GEMM3M         HAVE_LINALG_GEMMT
+ 
+  HAVE_LINALG_MKL_IMATCOPY   HAVE_LINALG_MKL_OMATADD  HAVE_LINALG_MKL_OMATCOPY
+ 
+   HAVE_LINALG_MKL_THREADS     HAVE_LINALG_SCALAPACK                  HAVE_MPI
+ 
+                 HAVE_MPI2         HAVE_MPI2_INPLACE       HAVE_MPI_IALLGATHER
+ 
+       HAVE_MPI_IALLREDUCE        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV
+ 
+           HAVE_MPI_IBCAST         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16
+ 
+               HAVE_MPI_IO HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF
+ 
+       HAVE_NETCDF_FORTRAN   HAVE_NETCDF_FORTRAN_MPI           HAVE_NETCDF_MPI
+ 
+                HAVE_NUMPY             HAVE_OS_LINUX         HAVE_TIMER_ABINIT
+ 
+            HAVE_WANNIER90                                                      
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> Li_band1_.abi
+- output file    -> Li_band1_.abo
+- root for input  files -> Li_band1_i
+- root for output files -> Li_band1_o
+ 
+ abinit : after writing the name of files
+ 
+--- !WARNING
+src_file: m_nctk.F90
+src_line: 572
+message: |
+    Strange, netcdf seems to support MPI-IO but: Permission denied
+...
+ 
+ 
+--- !WARNING
+src_file: m_nctk.F90
+src_line: 588
+message: |
+    The netcdf library does not support parallel IO, see message above
+    Abinit won't be able to produce files in parallel when e.g. paral_kgb == 1 is used.
+    Action: install a netcdf4+HDF5 library with MPI-IO support.
+...
+ 
+ABI_HOME  found in environment, with value /home/yerin/abinit-10.4.7
+-instrng: 63 lines of input have been read from file Li_band1_.abi
+ 
+ For atom type 1, psp file is /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Li.LDA_PW-JTH.xml
+- inpspheads : Reading pseudopotential header in XML form from 
+-   /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Li.LDA_PW-JTH.xml
+ 
+ inpspheads: deduce mpsang = 2, n1xccc = 1.
+
+======================================================= 
+ invars1m : enter jdtset= 1
+  xcart  is defined in input file (possibly in Angstrom)
+ ingeo: takes atomic coordinates from input array xcart
+ 
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1300
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  4, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+ 
+ 
+ symlatt: the Bravais lattice is mC (one-face-centered monoclinic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1309
+message: |
+    The Bravais lattice determined from modified primitive
+    vectors, bravais(1)=  2, has a lower symmetry than before,
+    but is still more symmetric than the real one, iholohedry=  1
+    obtained by taking into account the atomic positions.
+...
+ 
+ 
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+
+======================================================= 
+ invars1m : enter jdtset= 2
+  xcart  is defined in input file (possibly in Angstrom)
+ ingeo: takes atomic coordinates from input array xcart
+ 
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1300
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  4, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+ 
+ 
+ symlatt: the Bravais lattice is mC (one-face-centered monoclinic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1309
+message: |
+    The Bravais lattice determined from modified primitive
+    vectors, bravais(1)=  2, has a lower symmetry than before,
+    but is still more symmetric than the real one, iholohedry=  1
+    obtained by taking into account the atomic positions.
+...
+ 
+ 
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+ Real(R)+Recip(G) space primitive vectors, cartesian coordinates (Bohr,Bohr^-1):
+ R(1)=  5.6313839  0.0000000  0.0000000  G(1)=  0.1775762  0.0000000  0.0000000
+ R(2)=  0.0000000 37.7945227  0.0000000  G(2)=  0.0000000  0.0264589  0.0000000
+ R(3)=  0.0000000  0.0000000 37.7945227  G(3)=  0.0000000  0.0000000  0.0264589
+ Unit cell volume ucvol=  8.0440148E+03 bohr^3
+ Unit cell volume ucvol=  8.0440148E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+  8.878812224664429E-002
+ 
+ mknormpath : total number of points on the path: 101
+ 
+ Number of divisions for each segment of the normalized path:
+ 0.00000 0.00000 0.00000 ==>  0.50000 0.00000 0.00000 ( ndiv:   100 )
+ 
+ 
+
+======================================================= 
+ invars1m : enter jdtset= 3
+  xcart  is defined in input file (possibly in Angstrom)
+ ingeo: takes atomic coordinates from input array xcart
+ 
+ symlatt: the Bravais lattice is tP (primitive tetragonal)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1300
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  4, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+ 
+ 
+ symlatt: the Bravais lattice is mC (one-face-centered monoclinic)
+ 
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1309
+message: |
+    The Bravais lattice determined from modified primitive
+    vectors, bravais(1)=  2, has a lower symmetry than before,
+    but is still more symmetric than the real one, iholohedry=  1
+    obtained by taking into account the atomic positions.
+...
+ 
+ 
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ 
+--- !WARNING
+src_file: m_invars2.F90
+src_line: 2121
+message: |
+    nbdbuf is not specified in input, using `nbdbuf = 2*nspinor` that may be too small!
+    As a consequence, the NSCF cycle may have problems to converge the last bands within nstep iterations.
+    To avoid this problem specify nbdbuf in the input file and adjust nband accordingly.
+...
+ 
+ Real(R)+Recip(G) space primitive vectors, cartesian coordinates (Bohr,Bohr^-1):
+ R(1)=  5.6313839  0.0000000  0.0000000  G(1)=  0.1775762  0.0000000  0.0000000
+ R(2)=  0.0000000 37.7945227  0.0000000  G(2)=  0.0000000  0.0264589  0.0000000
+ R(3)=  0.0000000  0.0000000 37.7945227  G(3)=  0.0000000  0.0000000  0.0264589
+ Unit cell volume ucvol=  8.0440148E+03 bohr^3
+ Unit cell volume ucvol=  8.0440148E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+  8.878812224664429E-002
+ 
+ mknormpath : total number of points on the path: 101
+ 
+ Number of divisions for each segment of the normalized path:
+ 0.00000 0.00000 0.00000 ==>  0.50000 0.00000 0.00000 ( ndiv:   100 )
+ 
+ 
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ 
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2347
+message: |
+    nproc_spkpt= 20 >= nkpt= 8* nsppol= 1
+    The number of processors is larger than nkpt*nsppol. This is a WASTE.
+     Ignore this warning if this is not a GS run
+...
+ 
+ 
+--- !WARNING
+src_file: m_mpi_setup.F90
+src_line: 832
+message: |
+    Your number of spins*k-points (=8) will not distribute correctly
+    with the current number of processors (=20).
+    You will leave some empty.
+    YOU ARE STRONGLY ADVISED TO ACTIVATE AUTOMATIC PARALLELIZATION!
+    USE "AUTOPARAL=1" IN THE INPUT FILE.
+...
+ 
+getng is called for the coarse grid:
+ For input ecut=  2.000000E+01 best grid ngfft=      24     160     160
+       max ecut=  2.211017E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    24  160  160
+  Augmented FFT divisions ...................    25  161  160
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 34403
+getng is called for the fine grid:
+ Using supplied coarse mesh as initial guess.
+ For input ecut=  6.000000E+01 best grid ngfft=      40     270     270
+       max ecut=  6.224428E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    40  270  270
+  Augmented FFT divisions ...................    41  271  270
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ 
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2354
+message: |
+    nkpt*nsppol (101) is not a multiple of nproc_spkpt (20)
+    The k-point parallelisation is INEFFICIENT. 
+    Ignore this warning if this is not a GS run.
+...
+ 
+getng is called for the coarse grid:
+ For input ecut=  2.000000E+01 best grid ngfft=      24     160     160
+       max ecut=  2.211017E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    24  160  160
+  Augmented FFT divisions ...................    25  161  160
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 34483
+getng is called for the fine grid:
+ Using supplied coarse mesh as initial guess.
+ For input ecut=  6.000000E+01 best grid ngfft=      40     270     270
+       max ecut=  6.224428E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    40  270  270
+  Augmented FFT divisions ...................    41  271  270
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ 
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2347
+message: |
+    nproc_spkpt= 20 >= nkpt= 8* nsppol= 1
+    The number of processors is larger than nkpt*nsppol. This is a WASTE.
+     Ignore this warning if this is not a GS run
+...
+ 
+ 
+--- !WARNING
+src_file: m_mpi_setup.F90
+src_line: 832
+message: |
+    Your number of spins*k-points (=8) will not distribute correctly
+    with the current number of processors (=20).
+    You will leave some empty.
+    YOU ARE STRONGLY ADVISED TO ACTIVATE AUTOMATIC PARALLELIZATION!
+    USE "AUTOPARAL=1" IN THE INPUT FILE.
+...
+ 
+getng is called for the coarse grid:
+ For input ecut=  2.000000E+01 best grid ngfft=      24     160     160
+       max ecut=  2.211017E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    24  160  160
+  Augmented FFT divisions ...................    25  161  160
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 34403
+getng is called for the fine grid:
+ Using supplied coarse mesh as initial guess.
+ For input ecut=  6.000000E+01 best grid ngfft=      40     270     270
+       max ecut=  6.224428E+01
+ 
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    40  270  270
+  Augmented FFT divisions ...................    41  271  270
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ DATASET    1 : space group P1 (#  1); Bravais aP (primitive triclinic)
+ 
+ getdim_nloc: deduce lmnmax  =   9, lnmax  =   5,
+                      lmnmaxso=   9, lnmaxso=   5.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =      17    lmnmax =       9
+     lnmax =       5     mgfft =     160  mpssoang =       2    mqgrid =   13179
+     natom =       1  nloc_mem =       2    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =       1    n1xccc =       1    ntypat =       1
+    occopt =       7   xclevel =       1
+-    mband =           8        mffmem =           1         mkmem =           1
+       mpw =       34403          nfft =      614400          nkpt =           8
+ PAW method is used; the additional fine FFT grid is defined by:
+   mgfftf=       270    nfftf =   2916000
+================================================================================
+P This job should need less than                     453.431 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :     33.599 Mbytes ; DEN or POT disk file :     22.249 Mbytes.
+================================================================================
+ 
+ Biggest array : f_fftgr(disk), with     75.0020 MBytes.
+ memana : allocated an array of     75.002 Mbytes, for testing purposes.
+ memana: allocated     453.431Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    2 : space group P1 (#  1); Bravais aP (primitive triclinic)
+ 
+ getdim_nloc: deduce lmnmax  =   9, lnmax  =   5,
+                      lmnmaxso=   9, lnmaxso=   5.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =      -2    lmnmax =       9
+     lnmax =       5     mgfft =     160  mpssoang =       2    mqgrid =   13179
+     natom =       1  nloc_mem =       2    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =       1    n1xccc =       1    ntypat =       1
+    occopt =       7   xclevel =       1
+-    mband =           8        mffmem =           1         mkmem =           6
+       mpw =       34483          nfft =      614400          nkpt =         101
+ PAW method is used; the additional fine FFT grid is defined by:
+   mgfftf=       270    nfftf =   2916000
+================================================================================
+P This job should need less than                     322.115 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :    425.146 Mbytes ; DEN or POT disk file :     22.249 Mbytes.
+================================================================================
+ 
+ Biggest array : cg(disk), with     25.2581 MBytes.
+ memana : allocated an array of     25.258 Mbytes, for testing purposes.
+ memana: allocated     322.115Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    3 : space group P1 (#  1); Bravais aP (primitive triclinic)
+ 
+ getdim_nloc: deduce lmnmax  =   9, lnmax  =   5,
+                      lmnmaxso=   9, lnmaxso=   5.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  3.
+     intxc =       0    ionmov =       0      iscf =      17    lmnmax =       9
+     lnmax =       5     mgfft =     160  mpssoang =       2    mqgrid =   13179
+     natom =       1  nloc_mem =       2    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =       1    n1xccc =       1    ntypat =       1
+    occopt =       7   xclevel =       1
+-    mband =           8        mffmem =           1         mkmem =           1
+       mpw =       34403          nfft =      614400          nkpt =           8
+ PAW method is used; the additional fine FFT grid is defined by:
+   mgfftf=       270    nfftf =   2916000
+================================================================================
+P This job should need less than                     453.431 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :     33.599 Mbytes ; DEN or POT disk file :     22.249 Mbytes.
+================================================================================
+ 
+ Biggest array : f_fftgr(disk), with     75.0020 MBytes.
+ memana : allocated an array of     75.002 Mbytes, for testing purposes.
+ memana: allocated     453.431Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values
+-   iomode0 =  0 , fftalg0 =512 , wfoptalg0 = 10
+-
+- outvars: echo of global parameters not present in the input file
+-  max_nthreads =    0
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (Li_band1_o_OUT.nc)
+
+            acell      5.6313838760E+00  3.7794522658E+01  3.7794522658E+01 Bohr
+              amu      6.94100000E+00
+             ecut      2.00000000E+01 Hartree
+-          fftalg         512
+           getden1         -1
+           getden2          1
+           getden3         -1
+           iatsph2       1
+             iscf1         17
+             iscf2         -2
+             iscf3         17
+           istwfk1       2    0    0    0    3    0    0    0
+           istwfk2       2    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    0    0    0
+           istwfk3       2    0    0    0    3    0    0    0
+                       outvar_i_n : Printing only first  50 k-points.
+              ixc       -1012
+           jdtset        1    2    3
+              kpt1     0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       1.25000000E-01  0.00000000E+00  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       3.75000000E-01  0.00000000E+00  0.00000000E+00
+                       5.00000000E-01  0.00000000E+00  0.00000000E+00
+                      -3.75000000E-01  0.00000000E+00  0.00000000E+00
+                      -2.50000000E-01  0.00000000E+00  0.00000000E+00
+                      -1.25000000E-01  0.00000000E+00  0.00000000E+00
+              kpt2     0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       5.00000000E-03  0.00000000E+00  0.00000000E+00
+                       1.00000000E-02  0.00000000E+00  0.00000000E+00
+                       1.50000000E-02  0.00000000E+00  0.00000000E+00
+                       2.00000000E-02  0.00000000E+00  0.00000000E+00
+                       2.50000000E-02  0.00000000E+00  0.00000000E+00
+                       3.00000000E-02  0.00000000E+00  0.00000000E+00
+                       3.50000000E-02  0.00000000E+00  0.00000000E+00
+                       4.00000000E-02  0.00000000E+00  0.00000000E+00
+                       4.50000000E-02  0.00000000E+00  0.00000000E+00
+                       5.00000000E-02  0.00000000E+00  0.00000000E+00
+                       5.50000000E-02  0.00000000E+00  0.00000000E+00
+                       6.00000000E-02  0.00000000E+00  0.00000000E+00
+                       6.50000000E-02  0.00000000E+00  0.00000000E+00
+                       7.00000000E-02  0.00000000E+00  0.00000000E+00
+                       7.50000000E-02  0.00000000E+00  0.00000000E+00
+                       8.00000000E-02  0.00000000E+00  0.00000000E+00
+                       8.50000000E-02  0.00000000E+00  0.00000000E+00
+                       9.00000000E-02  0.00000000E+00  0.00000000E+00
+                       9.50000000E-02  0.00000000E+00  0.00000000E+00
+                       1.00000000E-01  0.00000000E+00  0.00000000E+00
+                       1.05000000E-01  0.00000000E+00  0.00000000E+00
+                       1.10000000E-01  0.00000000E+00  0.00000000E+00
+                       1.15000000E-01  0.00000000E+00  0.00000000E+00
+                       1.20000000E-01  0.00000000E+00  0.00000000E+00
+                       1.25000000E-01  0.00000000E+00  0.00000000E+00
+                       1.30000000E-01  0.00000000E+00  0.00000000E+00
+                       1.35000000E-01  0.00000000E+00  0.00000000E+00
+                       1.40000000E-01  0.00000000E+00  0.00000000E+00
+                       1.45000000E-01  0.00000000E+00  0.00000000E+00
+                       1.50000000E-01  0.00000000E+00  0.00000000E+00
+                       1.55000000E-01  0.00000000E+00  0.00000000E+00
+                       1.60000000E-01  0.00000000E+00  0.00000000E+00
+                       1.65000000E-01  0.00000000E+00  0.00000000E+00
+                       1.70000000E-01  0.00000000E+00  0.00000000E+00
+                       1.75000000E-01  0.00000000E+00  0.00000000E+00
+                       1.80000000E-01  0.00000000E+00  0.00000000E+00
+                       1.85000000E-01  0.00000000E+00  0.00000000E+00
+                       1.90000000E-01  0.00000000E+00  0.00000000E+00
+                       1.95000000E-01  0.00000000E+00  0.00000000E+00
+                       2.00000000E-01  0.00000000E+00  0.00000000E+00
+                       2.05000000E-01  0.00000000E+00  0.00000000E+00
+                       2.10000000E-01  0.00000000E+00  0.00000000E+00
+                       2.15000000E-01  0.00000000E+00  0.00000000E+00
+                       2.20000000E-01  0.00000000E+00  0.00000000E+00
+                       2.25000000E-01  0.00000000E+00  0.00000000E+00
+                       2.30000000E-01  0.00000000E+00  0.00000000E+00
+                       2.35000000E-01  0.00000000E+00  0.00000000E+00
+                       2.40000000E-01  0.00000000E+00  0.00000000E+00
+                       2.45000000E-01  0.00000000E+00  0.00000000E+00
+              kpt3     0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       1.25000000E-01  0.00000000E+00  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       3.75000000E-01  0.00000000E+00  0.00000000E+00
+                       5.00000000E-01  0.00000000E+00  0.00000000E+00
+                      -3.75000000E-01  0.00000000E+00  0.00000000E+00
+                      -2.50000000E-01  0.00000000E+00  0.00000000E+00
+                      -1.25000000E-01  0.00000000E+00  0.00000000E+00
+                       outvar_i_n : Printing only first  50 k-points.
+           kptopt1          3
+           kptopt2         -1
+           kptopt3          3
+         kptrlatt        8    0    0      0    1    0      0    0    1
+          kptrlen1     4.50510710E+01
+          kptrlen2     3.00000000E+01
+          kptrlen3     4.50510710E+01
+          kssform1          1
+          kssform2          3
+          kssform3          1
+P           mkmem1          1
+P           mkmem2          6
+P           mkmem3          1
+            natom           1
+           natsph2       1
+            nband1          8
+            nband2          8
+            nband3          8
+         nbandkss1          0
+         nbandkss2         -1
+         nbandkss3          0
+           nbdbuf1          0
+           nbdbuf2          2
+           nbdbuf3          0
+           ndtset           3
+           ndivsm1          0
+           ndivsm2        100
+           ndivsm3          0
+            ngfft          24     160     160
+          ngfftdg          40     270     270
+             nkpt1          8
+             nkpt2        101
+             nkpt3          8
+            nstep          50
+             nsym           1
+           ntypat           1
+              occ      2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+                       2.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000
+           occopt           7
+-      paral_atom           0
+        pawecutdg      6.00000000E+01 Hartree
+        pawfatbnd1          0
+        pawfatbnd2          1
+        pawfatbnd3          0
+        pawprtvol           3
+           shiftk1     0.00000000E+00  0.00000000E+00  0.00000000E+00
+           shiftk2     5.00000000E-01  5.00000000E-01  5.00000000E-01
+           shiftk3     0.00000000E+00  0.00000000E+00  0.00000000E+00
+          spgroup           1
+           toldfe      1.00000000E-06 Hartree
+           tolwfr      1.00000000E-16
+           tsmear      3.16681542E-03 Hartree
+            typat      1
+           useylm           1
+              wtk1       0.12500    0.12500    0.12500    0.12500    0.12500    0.12500
+                         0.12500    0.12500
+              wtk2       1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000
+              wtk3       0.12500    0.12500    0.12500    0.12500    0.12500    0.12500
+                         0.12500    0.12500
+                       outvars : Printing only first  50 k-points.
+            znucl        3.00000
+ 
+================================================================================
+ 
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ 
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ Checking if input is consistent with KSS generation
+ 
+ chkinp: Checking input parameters for consistency, jdtset=   3.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1:  0.22204460E-015
+            Smallest positive number:                       0.22250739E-307
+            Largest representable number:                   0.17976931E+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+  ==== OpenMP parallelism is OFF ====
+ 
+  ==== Using MPI-2 specifications ==== 
+  MPI-IO support is ON
+  xmpi_tag_ub ................      1048575
+  xmpi_bsize_ch ..............            1
+  xmpi_bsize_int .............            4
+  xmpi_bsize_sp ..............            4
+  xmpi_bsize_dp ..............            8
+  xmpi_bsize_spc .............            8
+  xmpi_bsize_dpc .............           16
+  xmpio_bsize_frm ............            4
+  xmpi_address_kind ..........            8
+  xmpi_offset_kind ...........            8
+  MPI_WTICK ..................   3.571379722525739E-010
+ 
+================================================================================
+== DATASET  1 ==================================================================
+-   mpi_nproc: 20, omp_nthreads: -1 (-1 if OMP is not activated)
+-    --> not optimal distribution: autoparal keyword recommended in input file <--
+ 
+ 
+--- !COMMENT
+src_file: m_xgScalapack.F90
+src_line: 241
+message: |
+    xgScalapack in auto mode
+...
+ 
+ 
+ getdim_nloc: deduce lmnmax  =   9, lnmax  =   5,
+                      lmnmaxso=   9, lnmaxso=   5.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+ 
+ Unit cell volume ucvol=  8.0440148E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+ 
+ Coarse grid specifications (used for wave-functions):
+ 
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  24 160 160
+         ecut(hartree)=     20.000   => boxcut(ratio)=   2.10286
+ 
+ Fine grid specifications (used for densities):
+ 
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  40 270 270
+         ecut(hartree)=     60.000   => boxcut(ratio)=   2.03706
+- pspini: atom type   1  psp file is /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Li.LDA_PW-JTH.xml
+- pspatm: opening atomic psp file    /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Li.LDA_PW-JTH.xml
+- pspatm : Reading pseudopotential header in XML form from /home/yerin/abinit-10.4.7/JTH-LDA-atomicdata-1.1/ATOMICDATA/Li.LDA_PW-JTH.xml
+ Pseudopotential format is: paw10
+ basis_size (lnmax)=  5 (lmn_size=  9), orbitals=   0   0   0   1   1
+ Spheres core radius: rc_sph= 1.60264751
+ 1 radial meshes are used:
+  - mesh 1: r(i)=AA*[exp(BB*(i-1))-1], size=2001 , AA= 0.17851E-02 BB= 0.53552E-02
+ Shapefunction is BESSEL type: shapef(r,l)=aa(1,l)*jl(q(1,l)*r)+aa(2,l)*jl(q(2,l)*r)
+ Radius for shape functions =  1.30023672
+ mmax= 2001
+ Radial grid used for partial waves is grid 1
+ Radial grid used for projectors is grid 1
+ Radial grid used for (t)core density is grid 1
+ Radial grid used for Vloc is grid 1
+ Radial grid used for pseudo valence density is grid 1
+ Mesh size for Vloc has been set to 1742 to avoid numerical noise.
+ Compensation charge density is not taken into account in XC energy/potential
+ beta integral value:      -0.603111E+01
+ pspatm: atomic psp has been read  and splines computed
+ 
+   1.80933409E+01                                ecore*ucvol(ha*bohr**3)
+ ==== Info on pseudopotentials ====
+  PAW calculation
+  Number of pseudopotentials ..    1
+  Number of types of atoms   ..    1
+  Scalar calculation (no spin-orbit term)
+  Nonlocal part applied using real spherical harmonics
+  Max number of non-local projectors over l and type   3
+  Highest angular momentum +1 .......   2
+  Max number of (l,n)   components ..   5
+  Max number of (l,m,n) components ..   9
+ 
+ Pseudo-Core Charge Info: 
+   Number of radial points for pseudo-core charge ..    1
+   XC core-correction treatment (optnlxccc) ........    1
+   Radius for pseudo-core charge for each type ..... 
+ 
+  - Atom type    1 has pseudo-core radius ..      80.0000
+ 
+ Info on the Q-grid used for form factors in spline form: 
+   Number of q-points for radial functions ffspl ..   7609
+   Number of q-points for vlspl ...................  13179
+   vloc is computed in Reciprocal Space
+ 
+  XC functional for type 1 is -1012
+ 
+ wfconv:     8 bands initialized randomly with npw= 17230, for ikpt=     1
+_setup2: Arith. and geom. avg. npw (full set) are   34366.375   34366.338
+ 
+ PAW TEST:
+ ==== setsym_ylm: rotation matrices in the basis ============
+ ====              of real spherical harmonics    ============
+  > Number of symmetries (nsym)=   1
+   >For symmetry  1 ( 1 0 0 0 1 0 0 0 1)
+    Rotation matrice for l=1:
+    1.000    0.000    0.000
+    0.000    1.000    0.000
+    0.000    0.000    1.000
+ initro: for itypat=  1, take pseudo charge density from pp file
+ 
+================================================================================
+ FFT (fine) grid used in SCF cycle:
+ 
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  40 270 270
+         ecut(hartree)=     60.000   => boxcut(ratio)=   2.03706
+ 
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ 
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ 
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ 
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 828
+message: |
+    Density went too small (lower than xc_denpos) at 730242 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.24E-06.
+    This might be due to (1) too low boxcut or (2) too low ecut for
+     pseudopotential core charge, or (3) too low ecut for estimated initial density.
+     Possible workarounds : increase ecut, or define the input variable densty,
+     with a value larger than the guess for the decay length, or initialize your,
+     density with a preliminary LDA or GGA-PBE if you are using a more exotic xc functional.
+...
+ 
+ 
+ PAW TEST:
+ ====== Moments of (n1-tn1) =========
+ 
+ Atom   1 (ispden=1):
+  ******* Moment of (n1-tn1)
+   l,m= 0 0: M= 3.2262928E-01
+   l,m= 1-1: M= 0.0000000E+00
+   l,m= 1 0: M= 0.0000000E+00
+   l,m= 1 1: M= 0.0000000E+00
+   l,m= 2-2: M= 0.0000000E+00
+   l,m= 2-1: M= 0.0000000E+00
+   l,m= 2 0: M= 0.0000000E+00
+   l,m= 2 1: M= 0.0000000E+00
+   l,m= 2 2: M= 0.0000000E+00
+ average electrostatic smooth potential [Ha] , [eV]      0.000000        0.000000
+ 
+ ==== Values of psp strength Dij (Hartree) ============
+ 
+ >>>>>>>>>> Atom   1:
+   ************ Dij atomic (Dij0) ***********
+  -1.76781   0.29035   1.52574   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.29035   0.06489   0.37881   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   1.52574   0.37881   1.25141   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647
+   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542
+   ************** Dij Hartree ***************
+   0.67737  -0.29001  -1.45612   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+  -0.29001   0.12692   0.63585   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+  -1.45612   0.63585   3.16141   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00022   0.00000   0.00000   0.00459   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00022   0.00000   0.00000   0.00459   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00022   0.00000   0.00000   0.00459
+   0.00000   0.00000   0.00000   0.00459   0.00000   0.00000   0.18453   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00459   0.00000   0.00000   0.18453   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00459   0.00000   0.00000   0.18453
+   **************** Dij_hat *****************
+  -0.22469   0.09511   0.51044  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+   0.09511  -0.03599  -0.18357   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.51044  -0.18357  -0.92074   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00051  -0.00000   0.00000  -0.00944  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00051   0.00000  -0.00000  -0.00944   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00052   0.00000   0.00000  -0.00947
+  -0.00000   0.00000   0.00000  -0.00944  -0.00000   0.00000  -0.12585  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00944   0.00000  -0.00000  -0.12585   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00947   0.00000   0.00000  -0.12606
+   ************* Dij_DFT+U (dijpawu) **********
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   ***************** Dij_xc *****************
+  -0.75731   0.31274   1.61564   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.31274  -0.12552  -0.63140   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   1.61564  -0.63140  -3.14833   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000  -0.00134   0.00000   0.00000  -0.02251   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.00134   0.00000   0.00000  -0.02251   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.00134   0.00000   0.00000  -0.02251
+   0.00000   0.00000   0.00000  -0.02251   0.00000   0.00000  -0.34379   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.02251   0.00000   0.00000  -0.34379   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.02251   0.00000   0.00000  -0.34379
+   **********    TOTAL Dij in Ha   **********
+  -2.07244   0.40819   2.19570  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+   0.40819   0.03031   0.19969   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   2.19570   0.19969   0.34375   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00676  -0.00000   0.00000  -0.00089  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00676   0.00000  -0.00000  -0.00089   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00676   0.00000   0.00000  -0.00091
+  -0.00000   0.00000   0.00000  -0.00089  -0.00000   0.00000   1.90031  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00089   0.00000  -0.00000   1.90031   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00091   0.00000   0.00000   1.90010
+ 
+ 
+ PAW TEST:
+ ========= Values of DIJ before symetrization =========
+ 
+  -2.07244   0.40819   2.19570  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+   0.40819   0.03031   0.19969   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   2.19570   0.19969   0.34375   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00676  -0.00000   0.00000  -0.00089  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00676   0.00000  -0.00000  -0.00089   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00676   0.00000   0.00000  -0.00091
+  -0.00000   0.00000   0.00000  -0.00089  -0.00000   0.00000   1.90031  -0.00000   0.00000
+  -0.00000   0.00000   0.00000  -0.00000  -0.00089   0.00000  -0.00000   1.90031   0.00000
+  -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00091   0.00000   0.00000   1.90010
+ 
+ 
+ PAW TEST:
+ ========= Values of DIJ after symetrization =========
+ 
+  -2.07244   0.40819   2.19570   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.40819   0.03031   0.19969   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   2.19570   0.19969   0.34375   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000  -0.00676   0.00000   0.00000  -0.00089   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.00676   0.00000   0.00000  -0.00089   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.00676   0.00000   0.00000  -0.00091
+   0.00000   0.00000   0.00000  -0.00089   0.00000   0.00000   1.90031   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.00089   0.00000   0.00000   1.90031   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.00091   0.00000   0.00000   1.90010
+ 
+ 
+ ITER STEP NUMBER     1
+ Max number of non-self-consistent loops: 2
+ cgwf: tolwfr_diago=    1.000000E-16
+ newocc: new Fermi energy is      -0.112416 , with nelect=      3.000000, Number of bisection calls: 50
+ mkrho: echo density (plane-wave part only)
+ Total charge density [el/Bohr^3]
+)     Maximum=    4.8832E-01  at reduced coord.    0.0000    0.0000    0.0000
+)     Minimum=    4.1174E-07  at reduced coord.    0.1250    0.9750    0.3188
+   Integrated=    1.9582E+00
+ 
+ PAW TEST:
+ ========= Values of RHOIJ before symetrization =========
+ 
+   1.91810   0.09541  -0.02570  -0.03410  -0.02532  -0.02039  -0.00071  -0.00042  -0.00027
+   0.09541   0.07205  -0.00061  -0.01389  -0.03188   0.01358   0.00002  -0.00022   0.00002
+  -0.02570  -0.00061   0.00059   0.00078  -0.00059   0.00021   0.00001   0.00001   0.00000
+  -0.03410  -0.01389   0.00078   0.02222   0.01198  -0.03643   0.00012   0.00008   0.00004
+  -0.02532  -0.03188  -0.00059   0.01198   0.02693  -0.02059  -0.00000   0.00010   0.00006
+  -0.02039   0.01358   0.00021  -0.03643  -0.02059   0.21842  -0.00016  -0.00008  -0.00053
+  -0.00071   0.00002   0.00001   0.00012  -0.00000  -0.00016   0.00000   0.00000   0.00000
+  -0.00042  -0.00022   0.00001   0.00008   0.00010  -0.00008   0.00000   0.00000   0.00000
+  -0.00027   0.00002   0.00000   0.00004   0.00006  -0.00053   0.00000   0.00000   0.00000
+ 
+ 
+ PAW TEST:
+ ========= Values of RHOIJ after symetrization =========
+ 
+   1.91810   0.09541  -0.02570  -0.03410  -0.02532  -0.02039  -0.00071  -0.00042  -0.00027
+   0.09541   0.07205  -0.00061  -0.01389  -0.03188   0.01358   0.00002  -0.00022   0.00002
+  -0.02570  -0.00061   0.00059   0.00078  -0.00059   0.00021   0.00001   0.00001   0.00000
+  -0.03410  -0.01389   0.00078   0.02222   0.01198  -0.03643   0.00012   0.00008   0.00004
+  -0.02532  -0.03188  -0.00059   0.01198   0.02693  -0.02059  -0.00000   0.00010   0.00006
+  -0.02039   0.01358   0.00021  -0.03643  -0.02059   0.21842  -0.00016  -0.00008  -0.00053
+  -0.00071   0.00002   0.00001   0.00012  -0.00000  -0.00016   0.00000   0.00000   0.00000
+  -0.00042  -0.00022   0.00001   0.00008   0.00010  -0.00008   0.00000   0.00000   0.00000
+  -0.00027   0.00002   0.00000   0.00004   0.00006  -0.00053   0.00000   0.00000   0.00000
+ 
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.4809E+00  at reduced coord.    0.0000    0.0000    0.0000
+)     Minimum=    4.1675E-07  at reduced coord.    0.1250    0.9741    0.3185
+   Integrated=    3.0000E+00
+ ETOT  1  -7.2879977372434    -7.288E+00 3.269E-01 6.054E-01
+ scprqt: <Vxc>= -2.2256633E-02 hartree
+ 
+ Simple mixing update:
+  residual square of the potential:   7.492112914639537E-008
+ 
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ 
+--- !WARNING
+src_file: m_drivexc.F90
+src_line: 828
+message: |
+    Density went too small (lower than xc_denpos) at 1069242 points
+    and was set to xc_denpos =   1.00E-14. Lowest was  -0.30E-05.
+    This might be due to (1) too low boxcut or (2) too low ecut for
+     pseudopotential core charge, or (3) too low ecut for estimated initial density.
+     Possible workarounds : increase ecut, or define the input variable densty,
+     with a value larger than the guess for the decay length, or initialize your,
+     density with a preliminary LDA or GGA-PBE if you are using a more exotic xc functional.
+...
+ 
+{SCF_istep: 1 , Vnl|psi>: 88 , wall_time: '  7.88 [s] '} <<< TIME
+ 
+ PAW TEST:
+ ====== Moments of (n1-tn1) =========
+ 
+ Atom   1 (ispden=1):
+  ******* Moment of (n1-tn1)
+   l,m= 0 0: M= 3.0250111E-01
+   l,m= 1-1: M=-1.8743372E-04
+   l,m= 1 0: M=-7.6891672E-05
+   l,m= 1 1: M=-1.3417320E-04
+   l,m= 2-2: M=-8.5139804E-06
+   l,m= 2-1: M= 2.9429986E-06
+   l,m= 2 0: M=-1.0742155E-05
+   l,m= 2 1: M=-4.6744948E-06
+   l,m= 2 2: M= 1.9564529E-05
+ average electrostatic smooth potential [Ha] , [eV]      0.000000        0.000000
+ 
+ ==== Values of psp strength Dij (Hartree) ============
+ 
+ >>>>>>>>>> Atom   1:
+   ************ Dij atomic (Dij0) ***********
+  -1.76781   0.29035   1.52574   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.29035   0.06489   0.37881   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   1.52574   0.37881   1.25141   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000  -0.00513   0.00000   0.00000   0.02647
+   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.02647   0.00000   0.00000   2.18542
+   ************** Dij Hartree ***************
+   0.62845  -0.26929  -1.35234  -0.00001  -0.00000  -0.00001  -0.00015  -0.00006  -0.00011
+  -0.26929   0.11793   0.59089   0.00000   0.00000   0.00000   0.00008   0.00004   0.00005
+  -1.35234   0.59089   2.93786   0.00002   0.00001   0.00001   0.00036   0.00016   0.00025
+  -0.00001   0.00000   0.00002   0.00019  -0.00000   0.00000   0.00413  -0.00000   0.00000
+  -0.00000   0.00000   0.00001  -0.00000   0.00019   0.00000  -0.00000   0.00413   0.00000
+  -0.00001   0.00000   0.00001   0.00000   0.00000   0.00019   0.00000   0.00000   0.00413
+  -0.00015   0.00008   0.00036   0.00413  -0.00000   0.00000   0.17070   0.00000  -0.00000
+  -0.00006   0.00004   0.00016  -0.00000   0.00413   0.00000   0.00000   0.17070  -0.00000
+  -0.00011   0.00005   0.00025   0.00000   0.00000   0.00413  -0.00000  -0.00000   0.17072
+   **************** Dij_hat *****************
+  -0.24244   0.10263   0.55077  -0.00002  -0.00002  -0.00001  -0.00044  -0.00043  -0.00012
+   0.10263  -0.03883  -0.19808   0.00001   0.00001   0.00000   0.00012   0.00012   0.00003
+   0.55077  -0.19808  -0.99349   0.00006   0.00006   0.00002   0.00081   0.00080   0.00022
+  -0.00002   0.00001   0.00006  -0.00056  -0.00000  -0.00000  -0.01019  -0.00000  -0.00000
+  -0.00002   0.00001   0.00006  -0.00000  -0.00056  -0.00000  -0.00000  -0.01019  -0.00000
+  -0.00001   0.00000   0.00002  -0.00000  -0.00000  -0.00056  -0.00000  -0.00000  -0.01020
+  -0.00044   0.00012   0.00081  -0.01019  -0.00000  -0.00000  -0.13584  -0.00000  -0.00001
+  -0.00043   0.00012   0.00080  -0.00000  -0.01019  -0.00000  -0.00000  -0.13585  -0.00001
+  -0.00012   0.00003   0.00022  -0.00000  -0.00000  -0.01020  -0.00001  -0.00001  -0.13593
+   ************* Dij_DFT+U (dijpawu) **********
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+   ***************** Dij_xc *****************
+  -0.74111   0.30584   1.58064   0.00001   0.00001   0.00001   0.00021   0.00010   0.00014
+   0.30584  -0.12272  -0.61727  -0.00000  -0.00000  -0.00000  -0.00006  -0.00003  -0.00005
+   1.58064  -0.61727  -3.07771  -0.00003  -0.00002  -0.00002  -0.00039  -0.00019  -0.00026
+   0.00001  -0.00000  -0.00003  -0.00132  -0.00000   0.00000  -0.02214  -0.00000   0.00000
+   0.00001  -0.00000  -0.00002  -0.00000  -0.00132   0.00000  -0.00000  -0.02214   0.00000
+   0.00001  -0.00000  -0.00002   0.00000   0.00000  -0.00132   0.00000   0.00000  -0.02214
+   0.00021  -0.00006  -0.00039  -0.02214  -0.00000   0.00000  -0.33873  -0.00000   0.00001
+   0.00010  -0.00003  -0.00019  -0.00000  -0.02214   0.00000  -0.00000  -0.33873   0.00000
+   0.00014  -0.00005  -0.00026   0.00000   0.00000  -0.02214   0.00001   0.00000  -0.33875
+   **********    TOTAL Dij in Ha   **********
+  -2.12291   0.42953   2.30481  -0.00002  -0.00002  -0.00000  -0.00038  -0.00039  -0.00008
+   0.42953   0.02127   0.15436   0.00001   0.00001   0.00000   0.00014   0.00013   0.00004
+   2.30481   0.15436   0.11807   0.00005   0.00005   0.00001   0.00078   0.00077   0.00020
+  -0.00002   0.00001   0.00005  -0.00681  -0.00000   0.00000  -0.00173  -0.00000  -0.00000
+  -0.00002   0.00001   0.00005  -0.00000  -0.00681  -0.00000  -0.00000  -0.00173  -0.00000
+  -0.00000   0.00000   0.00001   0.00000  -0.00000  -0.00681  -0.00000  -0.00000  -0.00175
+  -0.00038   0.00014   0.00078  -0.00173  -0.00000  -0.00000   1.88155  -0.00000  -0.00001
+  -0.00039   0.00013   0.00077  -0.00000  -0.00173  -0.00000  -0.00000   1.88154  -0.00001
+  -0.00008   0.00004   0.00020  -0.00000  -0.00000  -0.00175  -0.00001  -0.00001   1.88146
+ 
+ 
+ PAW TEST:
+ ========= Values of DIJ before symetrization =========
+ 
+  -2.12291   0.42953   2.30481  -0.00002  -0.00002  -0.00000  -0.00038  -0.00039  -0.00008
+   0.42953   0.02127   0.15436   0.00001   0.00001   0.00000   0.00014   0.00013   0.00004
+   2.30481   0.15436   0.11807   0.00005   0.00005   0.00001   0.00078   0.00077   0.00020
+  -0.00002   0.00001   0.00005  -0.00681  -0.00000   0.00000  -0.00173  -0.00000  -0.00000
+  -0.00002   0.00001   0.00005  -0.00000  -0.00681  -0.00000  -0.00000  -0.00173  -0.00000
+  -0.00000   0.00000   0.00001   0.00000  -0.00000  -0.00681  -0.00000  -0.00000  -0.00175
+  -0.00038   0.00014   0.00078  -0.00173  -0.00000  -0.00000   1.88155  -0.00000  -0.00001
+  -0.00039   0.00013   0.00077  -0.00000  -0.00173  -0.00000  -0.00000   1.88154  -0.00001
+  -0.00008   0.00004   0.00020  -0.00000  -0.00000  -0.00175  -0.00001  -0.00001   1.88146
+ 
+ 
+ PAW TEST:
+ ========= Values of DIJ after symetrization =========
+ 
+  -2.12291   0.42953   2.30481  -0.00002  -0.00002  -0.00000  -0.00038  -0.00039  -0.00008
+   0.42953   0.02127   0.15436   0.00001   0.00001   0.00000   0.00014   0.00013   0.00004
+   2.30481   0.15436   0.11807   0.00005   0.00005   0.00001   0.00078   0.00077   0.00020
+  -0.00002   0.00001   0.00005  -0.00681  -0.00000   0.00000  -0.00173  -0.00000  -0.00000
+  -0.00002   0.00001   0.00005  -0.00000  -0.00681  -0.00000  -0.00000  -0.00173  -0.00000
+  -0.00000   0.00000   0.00001   0.00000  -0.00000  -0.00681  -0.00000  -0.00000  -0.00175
+  -0.00038   0.00014   0.00078  -0.00173  -0.00000  -0.00000   1.88155  -0.00000  -0.00001
+  -0.00039   0.00013   0.00077  -0.00000  -0.00173  -0.00000  -0.00000   1.88154  -0.00001
+  -0.00008   0.00004   0.00020  -0.00000  -0.00000  -0.00175  -0.00001  -0.00001   1.88146
+ 
+ 
+ ITER STEP NUMBER     2
+ Max number of non-self-consistent loops: 2
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002ACAC495238C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002ACAC46F05D0  Unknown               Unknown  Unknown
+abinit             0000000002415FBF  Unknown               Unknown  Unknown
+abinit             00000000023D5D77  Unknown               Unknown  Unknown
+abinit             00000000023D4354  Unknown               Unknown  Unknown
+abinit             00000000023B7934  Unknown               Unknown  Unknown
+abinit             00000000019BAEF4  Unknown               Unknown  Unknown
+abinit             0000000001788DA4  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACAC73813D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B855662A38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B85563C85D0  Unknown               Unknown  Unknown
+libmkl_avx.so.2    00002B865BE0BFDE  mkl_blas_avx_xddo     Unknown  Unknown
+libmkl_intel_lp64  00002B854C8DCDFF  DDOT                  Unknown  Unknown
+abinit             00000000026BC7FB  Unknown               Unknown  Unknown
+abinit             000000000178A2A1  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B85590593D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B8BE4C1638C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B8BE49B45D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE31AD7C6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE31A1BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE30C3DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE30E2364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE30BA780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE31BC217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8BE3065E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B8BE2C7EA50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B8BE76453D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B7744A6238C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B77448005D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742FF987C  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742FEDBA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742F0FDE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742F2E364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742F06780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7743008217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7742EB1E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B7742ACAA50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B77474913D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AEE5F82C38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AEE5F5CA5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DDC3881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DDB7BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DCD9DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DCF8364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DCD0780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DDD2217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AEE5DC7BE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002AEE5D894A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002AEE6225B3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AE929B7C38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AE92991A5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928113881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928107BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928029DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928048364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928020780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE928122217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE927FCBE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002AE927BE4A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE92C5AB3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B48B15B138C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B48B134F5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFB48881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFB3CBA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFA5EDE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFA7D364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFA55780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFB57217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B48AFA00E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B48AF619A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B48B3FE03D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B00CE2EC38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B00CE08A5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC8847D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC877BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC799DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC7B8364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC790780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC892217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B00CC73BE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B00CC354A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B00D0D1B3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002ACE9122538C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002ACE90FC35D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F7BC881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F7B0BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F6D2DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F6F1364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F6C9780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F7CB217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACE8F674E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002ACE8F28DA50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACE93C543D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B4D698DA38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4D696785D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67E71881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67E65BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67D87DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67DA6364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67D7E780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67E80217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D67D29E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B4D67942A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4D6C3093D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B9E8400E38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B9E83DAC5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E825A587A  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E82599BA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E824BBDE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E824DA364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E824B2780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E825B4217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9E8245DE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B9E82076A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9E86A3D3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B51E83A138C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B51E813F5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E6938881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E692CBA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E684EDE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E686D364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E6845780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E6947217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B51E67F0E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B51E6409A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B51EADD03D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B792092F38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B79206CD5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EEC6881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EEBABA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EDDCDE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EDFB364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EDD3780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791EED5217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B791ED7EE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B791E997A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B792335E3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B54E91E838C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B54E8F865D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E777E50E  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E777D43A  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E7695DA4  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E76B4364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E768C780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E778E217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54E7637E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B54E7250A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B54EBC173D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B19F40BE38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B19F3E5C5D0  Unknown               Unknown  Unknown
+libmkl_avx.so.2    00002B1AF9598C48  mkl_blas_avx_zgem     Unknown  Unknown
+libmkl_avx.so.2    00002B1AF98E573E  mkl_blas_avx_xzge     Unknown  Unknown
+libmkl_sequential  00002B19EB91B996  mkl_blas_zgemm        Unknown  Unknown
+libmkl_intel_lp64  00002B19EA36229A  zgemm                 Unknown  Unknown
+abinit             00000000026C98E2  Unknown               Unknown  Unknown
+abinit             00000000026C95D7  Unknown               Unknown  Unknown
+abinit             0000000001789B0D  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B19F6AED3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002AAC2D0E338C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AAC2CE815D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B67A881  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B66EBA5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B590DE2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B5AF364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B587780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B689217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC2B532E91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002AAC2B14BA50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002AAC2FB123D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B473BF1638C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B473BCB45D0  Unknown               Unknown  Unknown
+libmkl_avx.so.2    00002B4843D7EF67  mkl_dft_avx_ippsD     Unknown  Unknown
+libmkl_avx.so.2    00002B4841E1955A  Unknown               Unknown  Unknown
+libmkl_intel_lp64  00002B473286206F  mkl_dft_dfti_comp     Unknown  Unknown
+abinit             00000000023DD535  Unknown               Unknown  Unknown
+abinit             00000000023D4354  Unknown               Unknown  Unknown
+abinit             00000000023B7934  Unknown               Unknown  Unknown
+abinit             00000000019BAEF4  Unknown               Unknown  Unknown
+abinit             000000000178A154  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B473E9453D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B12448CD38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B124466B5D0  Unknown               Unknown  Unknown
+libmkl_avx.so.2    00002B134A884FA0  mkl_dft_avx_coDFT     Unknown  Unknown
+libmkl_avx.so.2    00002B134A822800  Unknown               Unknown  Unknown
+libmkl_intel_lp64  00002B123B21906F  mkl_dft_dfti_comp     Unknown  Unknown
+abinit             00000000023DD7EC  Unknown               Unknown  Unknown
+abinit             00000000023D4354  Unknown               Unknown  Unknown
+abinit             00000000023B7934  Unknown               Unknown  Unknown
+abinit             00000000019BAEF4  Unknown               Unknown  Unknown
+abinit             000000000178A154  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B12472FC3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B4B69AE238C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4B698805D0  Unknown               Unknown  Unknown
+libmkl_avx.so.2    00002B4C6FA9A2E2  mkl_dft_avx_coDFT     Unknown  Unknown
+libmkl_avx.so.2    00002B4C6FA37800  Unknown               Unknown  Unknown
+libmkl_intel_lp64  00002B4B6042E06F  mkl_dft_dfti_comp     Unknown  Unknown
+abinit             00000000023DD7EC  Unknown               Unknown  Unknown
+abinit             00000000023D4354  Unknown               Unknown  Unknown
+abinit             00000000023B7934  Unknown               Unknown  Unknown
+abinit             00000000019BAEF4  Unknown               Unknown  Unknown
+abinit             000000000178A154  Unknown               Unknown  Unknown
+abinit             000000000082DE67  Unknown               Unknown  Unknown
+abinit             00000000007FEF2A  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4B6C5113D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B1454ACD38C  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B145486B5D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1453063455  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B145306243A  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1452F7ADA4  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1452F99364  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1452F71780  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1453073217  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1452F1CE91  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  00002B1452B35A50  mpi_allreduce_        Unknown  Unknown
+abinit             0000000003132882  Unknown               Unknown  Unknown
+abinit             0000000000801C39  Unknown               Unknown  Unknown
+abinit             0000000000751BEC  Unknown               Unknown  Unknown
+abinit             0000000000746015  Unknown               Unknown  Unknown
+abinit             00000000007459D9  Unknown               Unknown  Unknown
+abinit             000000000067B541  Unknown               Unknown  Unknown
+abinit             0000000000447725  Unknown               Unknown  Unknown
+abinit             000000000042A63F  Unknown               Unknown  Unknown
+abinit             0000000000412FF4  Unknown               Unknown  Unknown
+abinit             00000000004102A2  Unknown               Unknown  Unknown
+libc-2.17.so       00002B14574FC3D5  __libc_start_main     Unknown  Unknown
+abinit             00000000004101B9  Unknown               Unknown  Unknown
