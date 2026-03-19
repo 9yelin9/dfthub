@@ -6,7 +6,8 @@ getden -1
 
 # Basics
 #structure "poscar:POSCAR"
-acell  5.96 20.0 20.0 angstrom
+acell  2.98 20.0 20.0 angstrom
+#acell  5.96 20.0 20.0 angstrom
 rprim  1 0 0  0 1 0  0 0 1
 
 ntypat 1
@@ -27,7 +28,6 @@ nstep  50 # SCF steps
 ecut   20.0 # Maximal kinetic energy cut-off, in Hartree
 toldfe 1.0d-6  # SCF convergence
 tolwfr 1.0d-16 # SCF convergence
-istwfk *1
 occopt 7 # OCCupation OPTion (7: Gaussian)
 tsmear 1000 K # Temperature of SMEARing
 
@@ -44,20 +44,32 @@ nspinor 1 # Number of SPINORial components of the wavefunctions
 pawecutdg 60.0 # PAW - Energy CUToff for the Double Grid
 pawprtvol 3
 
-w90prtunk2 1 # Prints UNK files (for plotting the Wannier functions)
-
 #DS2##############################################################################
 
 # Basics
-getden2  1
+getden2 1
 
-nstep2   0
-tolwfr2  1.0d-10 # dummy here
-getwfk2  1
-istwfk2  *1 # Controls the form of the wavefunctions
+iscf2       -2 # Integer for SCF (2: non-self-consistent calc.; for band structure)
+kptopt2     -1 # KPoinTs OPTion (-4: rely on kptbounds and ndivsm (or ndivk))
+ndivsm2     100
+kptbounds2  0.0 0.0 0.0 #G
+            0.5 0.0 0.0 #X
 
-iscf2   -2
-nband2  2
-kptopt2 3 # Option for the automatic generation of k points
+# PAW
+pawfatbnd2 1 # print band structure in the FAT-BaND representation (1: only L, 2: L and M)
 
-prtwant2   2 # Call to Wannier90
+# GW
+nbandkss2 -1 # Number of BANDs in the KSS file
+kssform2  3 # Kohn-Sham Structure file FORMat (3: use conjugate gradient algorithm)
+
+#DS3##############################################################################
+
+# Basics
+getden3 1
+
+iscf3   -2
+kptopt3 3
+ngkpt3  80 1 1
+
+prtdos3 3
+#dosdeltae3 0.0

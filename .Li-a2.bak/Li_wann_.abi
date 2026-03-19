@@ -44,8 +44,6 @@ nspinor 1 # Number of SPINORial components of the wavefunctions
 pawecutdg 60.0 # PAW - Energy CUToff for the Double Grid
 pawprtvol 3
 
-w90prtunk2 1 # Prints UNK files (for plotting the Wannier functions)
-
 #DS2##############################################################################
 
 # Basics
@@ -61,3 +59,4 @@ nband2  2
 kptopt2 3 # Option for the automatic generation of k points
 
 prtwant2   2 # Call to Wannier90
+#w90prtunk2 1 # Prints UNK files (for plotting the Wannier functions)

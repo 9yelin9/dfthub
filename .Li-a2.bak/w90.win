@@ -7,8 +7,6 @@ begin projections
 end projections
 
 write_hr = true
-wannier_plot = true
-wannier_plot_format = cube
 
 bands_plot = true
 begin kpoint_path

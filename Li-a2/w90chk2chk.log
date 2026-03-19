@@ -1,0 +1,22 @@
+ Reading information from file w90.chk :
+ written on 17Mar2026 at 19:08:52
+Number of bands: 1
+Excluded bands: 1.
+Real lattice: read.
+Reciprocal lattice: read.
+Num kpts:8
+mp_grid: read.
+kpt_latt: read.
+nntot:6
+num_wann:1
+checkpoint: postwann
+have_disentangled: FALSE
+U_matrix: read.
+M_matrix: read.
+wannier_centres: read.
+wannier_spreads: read.
+ ... done
+
+
+ Writing formatted checkpoint file w90.chk.fmt... done
+
