@@ -18,7 +18,7 @@ cd Li-a2
 ```bash
 mpirun -np 1 abinit Li_wann_.abi
 ```
-3. Check `w90_hr.dat` (Columns: $R_1, R_2, R_3, i, j, \text{Re}(t), \text{Im}(t)$):
+3. Check `w90_hr.dat` (Columns: R1, R2, R3, i, j, Re(t), Im(t)):
 ```bash
 ...
  -4    0    0    1    1    0.003014    0.000000
