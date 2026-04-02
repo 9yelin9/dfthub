@@ -17,3 +17,5 @@ UNK*
 *.mat
 *.log
 *.sh.o*
+fig/
+.*/
