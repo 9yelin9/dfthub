@@ -1,4 +1,4 @@
 # dfthub
-Get Coulomb interaction U and Hund's coupling J using CRPA in ABINIT
+First-Principles Hubbard Parameter Extraction
 
 ⚠️ Use single processor while running wann and crpa
