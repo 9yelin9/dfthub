@@ -14,7 +14,7 @@ First-Principles Hubbard Parameter Extraction
 ```bash
 cd Li-a2
 ```
-2. Execute ABINIT-Wannier90 interface (⚠️ Use single processor):
+2. Execute ABINIT-Wannier90 interface (⚠️Use single processor):
 ```bash
 mpirun -np 1 abinit Li_wann_.abi
 ```
@@ -38,7 +38,7 @@ mpirun -np 1 abinit Li_wann_.abi
 ```bash
 cd Li-a2
 ```
-2. Execute ABINIT-cRPA calculation (⚠️ Use single processor):
+2. Execute ABINIT-cRPA calculation (⚠️Use single processor):
 ```bash
 mpirun -np 1 abinit Li_crpa_.abi
 ```
