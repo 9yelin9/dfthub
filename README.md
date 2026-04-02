@@ -1,6 +1,13 @@
 # dfthub
 First-Principles Hubbard Parameter Extraction
 
+## Target Materials
+| Directory | Lattice constant | Spin polarization |
+| :--- | :--- | :--- |
+| Li | $a_0$ | O |
+| Li-a1 | $a_0$ | X |
+| Li-a2 | $2a_0$ | X |
+
 ## Usage
 ### 1. Hopping parameter ($t$) extraction:
 1. Navigate to target material's directory:
