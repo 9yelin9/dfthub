@@ -1,8 +1,9 @@
 *.abo
-*.chk
+*.chk*
 *.eig
 *.mmn
 *.wout
+*.werr
 *.dat
 *.gnu
 *.kpt
@@ -12,3 +13,7 @@
 *_o_*
 __*
 UNK*
+*.cube
+*.mat
+*.log
+*.sh.o*
