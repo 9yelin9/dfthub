@@ -4,9 +4,15 @@ First-Principles Hubbard Parameter Extraction
 ## Systems
 | Directory | Lattice constant | Spin polarization | Description |
 | :--- | :---: | :---: | :--- |
-| Li | $a_0$ | O | |
-| Li-a1 | $a_0$ | X | |
-| Li-a2 | $2a_0$ | X | |
+| Li | $a_0$ | O | - |
+| Li-a1 | $a_0$ | X | - |
+| Li-a2 | $2a_0$ | X | - |
+
+## Prerequisite
+- [ABINIT v10.6+](https://github.com/abinit/abinit/releases/tag/10.6.5)
+- [Wannier90 v3.1+](https://wannier.org/download/)
+- [Python v3.12+](https://www.python.org/downloads/)
+- Python dependencies: [numpy](https://pypi.org/project/numpy/), [scipy](https://pypi.org/project/scipy/), [matplotlib](https://pypi.org/project/matplotlib/), [abipy](https://pypi.org/project/abipy/)
 
 ## Usage
 ### 1. Hopping parameter ($t$) extraction:
