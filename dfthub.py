@@ -54,7 +54,7 @@ def get_density(target_dir, band_idx=2, is_sppol=False):
 
 	# ABINIT: [root]_DEN.cube
 	fn = f'{target_dir}/{target_mat}_wann_o_DS1_DEN'
-	"""
+
 	### convert ABINIT binary density to Gaussian Cube format
 	den2cube = subprocess.run(
 			['cut3d'],
@@ -65,7 +65,6 @@ def get_density(target_dir, band_idx=2, is_sppol=False):
 	if den2cube.returncode != 0:
 		print(den2cube.stderr)
 		sys.exit(1)
-	"""
 
 	with open(fn+'.cube', 'r') as f: lines = f.readlines()
 	ls = [lines[i].split() for i in [2, 3, 4, 5]]
