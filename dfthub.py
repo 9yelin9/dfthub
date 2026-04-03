@@ -11,8 +11,8 @@ Description:
 	  Phase Approximation (cRPA) calculations within the ABINIT framework.
 
 Author: Yerin Jang
-Affiliation: Gwangju Institute of Science and Technology, School of Materials Science and Engineering
-Last Modified: 2026 . 04 . 02
+Affiliation: Gwangju Institute of Science and Technology, Department of Materials Science and Engineering
+Last Modified: 2026 . 04 . 03
 """
 
 import os
