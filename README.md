@@ -11,8 +11,8 @@ First-Principles Hubbard Parameter Extraction
 ## Prerequisite
 - [ABINIT v10.6+](https://github.com/abinit/abinit/releases/tag/10.6.5)
 - [Wannier90 v3.1+](https://wannier.org/download/)
-- [Python v3.12+](https://www.python.org/downloads/)
-- Python dependencies: [numpy](https://pypi.org/project/numpy/), [scipy](https://pypi.org/project/scipy/), [matplotlib](https://pypi.org/project/matplotlib/), [abipy](https://pypi.org/project/abipy/)
+- Python v3.12+
+- Python dependencies: **abipy**, numpy, scipy, matplotlib
 
 ## Usage
 ### 1. Hopping parameter ($t$) extraction:
