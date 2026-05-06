@@ -1,10 +1,10 @@
 # dfthub
-First-Principles Hubbard Parameter Extraction
+First-Principles Hubbard Parameter Extraction.
 
 ## Systems
-You can choose one of systems in `data/` directory
+You can choose one of the systems in `data/` directory.
 | Directory | Lattice constant | Spin polarization | Description |
-| :--- | :---: | :---: | :--- |
+| :--- | :---: | :---: | :---: |
 | Li | $a_0$ | O | - |
 | Li-a1 | $a_0$ | X | - |
 | Li-a2 | $2a_0$ | X | - |
@@ -17,7 +17,7 @@ You can choose one of systems in `data/` directory
 
 ## Usage
 ### 1. Hopping parameter ($t$) extraction
-1. Navigate to target system's directory:
+1. Navigate to the target system's directory:
 ```bash
 cd data/Li-a2_init
 ```
@@ -41,7 +41,7 @@ mpirun -np 1 abinit wann_.abi
 ```
 
 ### 2. Interaction parameters ($U$ and $J$)
-1. Navigate to target system's directory:
+1. Navigate to the target system's directory:
 ```bash
 cd data/Li-a2_init
 ```
@@ -84,24 +84,25 @@ Hund coupling J2=U(m1,m2,m2,m1) for the cRPA interaction
 ```
 
 ### 3. Corrected density calculation
-1. Run Hubbard model simulation code:
+1. Run the Hubbard model simulation code:
 ```bash
 cd Hub_1D/example
 python3 simple_example.py
 ```
 
-2. Run density correction script: 
+2. Run the density correction script with the simulation result: 
 ```bash
 ./dfthub.py data/Li-a2_init -d Hub_1D/data/data_N20_t-0.136_tp0.020_U5.420.jld2
 ```
 
-3. Check output directory and corrected density `dfthub_DEN`:
+3. Check the output directory and the corrected density `dfthub_DEN`:
 ```bash
 ls data/Li-a2_t-0.136_tp0.020_U5.420
 ```
+*Note: The output directory name is automatically generated based on the simulation result name.*
 Expected files:
 ```bash
 crpa_.abi  dfthub_DEN  w90.win  wann_.abi
 ```
 
-4. Now repeat workflow!
+4. Now repeat the workflow!

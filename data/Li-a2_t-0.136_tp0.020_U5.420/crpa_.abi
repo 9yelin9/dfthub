@@ -6,7 +6,7 @@ prtvol 10
 prtgsr 0 # GSR file printing produces some unpredictable results
 
 #DS1##############################################################################
-getden1_filepath "dfthub_DEN"
+getden_filepath1 "dfthub_DEN"
 
 # Basics
 acell  5.96 20.0 20.0 angstrom
