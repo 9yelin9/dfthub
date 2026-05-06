@@ -100,6 +100,7 @@ python3 simple_example.py
 ls data/Li-a2_t-0.136_tp0.020_U5.420
 ```
 *Note: The output directory name is automatically generated based on the simulation result name.*
+
 Expected files:
 ```bash
 crpa_.abi  dfthub_DEN  w90.win  wann_.abi
