@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -S /bin/bash
-#$ -q all.q@node04
+#$ -q all.q
 #$ -pe mpi 1
 #$ -j y
 #$ -cwd

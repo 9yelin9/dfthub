@@ -2,6 +2,7 @@
 First-Principles Hubbard Parameter Extraction
 
 ## Systems
+You can choose one of systems in `data/` directory
 | Directory | Lattice constant | Spin polarization | Description |
 | :--- | :---: | :---: | :--- |
 | Li | $a_0$ | O | - |
@@ -15,14 +16,14 @@ First-Principles Hubbard Parameter Extraction
 - Python dependencies: **abipy**, numpy, scipy, matplotlib
 
 ## Usage
-### 1. Hopping parameter ($t$) extraction:
+### 1. Hopping parameter ($t$) extraction
 1. Navigate to target system's directory:
 ```bash
-cd Li-a2
+cd data/Li-a2_init
 ```
-2. Execute ABINIT-Wannier90 interface (⚠️Use single processor):
+2. Run ABINIT-Wannier90 interface (⚠️Use single processor):
 ```bash
-mpirun -np 1 abinit Li_wann_.abi
+mpirun -np 1 abinit wann_.abi
 ```
 3. Check `w90_hr.dat` (Columns: R1, R2, R3, i, j, Re(t), Im(t)):
 ```bash
@@ -39,16 +40,16 @@ mpirun -np 1 abinit Li_wann_.abi
 ...
 ```
 
-### 2. Interaction parameters ($U$ and $J$):
+### 2. Interaction parameters ($U$ and $J$)
 1. Navigate to target system's directory:
 ```bash
-cd Li-a2
+cd data/Li-a2_init
 ```
-2. Execute ABINIT-cRPA calculation (⚠️Use single processor):
+2. Run ABINIT-cRPA calculation (⚠️Use single processor):
 ```bash
-mpirun -np 1 abinit Li_crpa_.abi
+mpirun -np 1 abinit crpa_.abi
 ```
-3. Check `Li_crpa_.abo`:
+3. Check `crpa_.abo`:
 ```bash
 ...
 == Calculation of the screened interaction on the correlated orbital U m == 
@@ -83,7 +84,24 @@ Hund coupling J2=U(m1,m2,m2,m1) for the cRPA interaction
 ```
 
 ### 3. Corrected density calculation
-1. Run density correction script: 
+1. Run Hubbard model simulation code:
 ```bash
-./dfthub.py Li-a2 -d
+cd Hub_1D/example
+python3 simple_example.py
 ```
+
+2. Run density correction script: 
+```bash
+./dfthub.py data/Li-a2_init -d Hub_1D/data/data_N20_t-0.136_tp0.020_U5.420.jld2
+```
+
+3. Check output directory and corrected density `dfthub_DEN`:
+```bash
+ls data/Li-a2_t-0.136_tp0.020_U5.420
+```
+Expected files:
+```bash
+crpa_.abi  dfthub_DEN  w90.win  wann_.abi
+```
+
+4. Now repeat workflow!

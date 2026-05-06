@@ -1,0 +1,71 @@
+ndtset 3
+jdtset 1 2 3
+
+#DS1##############################################################################
+#getden_filepath "dfthub_DEN"
+
+# Basics
+acell  5.96 20.0 20.0 angstrom
+rprim  1 0 0  0 1 0  0 0 1
+
+ntypat 1
+znucl  3
+natom 1
+typat 1
+xcart 0.0 0.0 0.0
+pp_dirpath "$ABI_HOME/JTH-LDA-atomicdata-1.1/ATOMICDATA/"
+pseudos "Li.LDA_PW-JTH.xml"
+
+nsppol 1 # Number of SPin POLarization
+#spinat 0.0 0.0 1.0 
+
+nsym   1 # Number fo SYMmetry operations (1: no sym; only indentity)
+nstep  50 # SCF steps
+ecut   20.0 # Maximal kinetic energy cut-off, in Hartree
+toldfe 1.0d-6  # SCF convergence
+tolwfr 1.0d-16 # SCF convergence
+occopt 7 # OCCupation OPTion (7: Gaussian)
+tsmear 1000 K # Temperature of SMEARing
+
+nband   8 # Number of BANDs
+kptopt  3 # KPoinTs OPTion (3: rely on ngkpt, nshiftk and shiftk; do not consider any sym)
+ngkpt   8 1 1 # K - PoinTs grid : Real space LATTice
+nshiftk 1 # No shift
+shiftk  0.0 0.0 0.0
+
+# GS
+nspinor 1 # Number of SPINORial components of the wavefunctions
+
+# PAW
+pawecutdg 60.0 # PAW - Energy CUToff for the Double Grid
+pawprtvol 3
+
+#DS2##############################################################################
+
+# Basics
+getden2 1
+
+iscf2       -2 # Integer for SCF (2: non-self-consistent calc.; for band structure)
+kptopt2     -1 # KPoinTs OPTion (-4: rely on kptbounds and ndivsm (or ndivk))
+ndivsm2     100
+kptbounds2  0.0 0.0 0.0 #G
+            0.5 0.0 0.0 #X
+
+# PAW
+pawfatbnd2 1 # print band structure in the FAT-BaND representation (1: only L, 2: L and M)
+
+# GW
+nbandkss2 -1 # Number of BANDs in the KSS file
+kssform2  3 # Kohn-Sham Structure file FORMat (3: use conjugate gradient algorithm)
+
+#DS3##############################################################################
+
+# Basics
+getden3 1
+
+iscf3   -2
+kptopt3 3
+ngkpt3  80 1 1
+
+prtdos3 3
+#dosdeltae3 0.0
