@@ -5,9 +5,9 @@ from juliacall import Main as jl
 jl.include("../src/measure.jl")
 
 N_sites = 20     
-t_hop = -0.136     #(NN)
+t_hop  = -0.136   #(NN)
 tp_hop = 0.020    #(NNN) 
-U_int = 5.42
+U_int  = 5.425
 
 
 

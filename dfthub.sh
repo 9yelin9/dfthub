@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -S /bin/bash
 #$ -q all.q
-#$ -pe mpi 1
+#$ -pe mpi 20
 #$ -j y
 #$ -cwd
 #$ -o log/
