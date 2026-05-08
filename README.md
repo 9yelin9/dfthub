@@ -92,12 +92,12 @@ python3 simple_example.py
 
 2. Run the density correction script with the simulation result: 
 ```bash
-./dfthub.py data/Li-a2_init -d Hub_1D/data/data_N20_t-0.136_tp0.020_U5.420.jld2
+./dfthub.py data/Li-a2_init -d Hub_1D/data/data_N20_t-0.136_tp0.020_U5.425.jld2
 ```
 
 3. Check the output directory and the corrected density `dfthub_DEN`:
 ```bash
-ls data/Li-a2_t-0.136_tp0.020_U5.420
+ls data/Li-a2_t-0.136_tp0.020_U5.425
 ```
 *Note: The output directory name is automatically generated based on the simulation result name.*
 
