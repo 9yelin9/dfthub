@@ -221,20 +221,19 @@ def get_density(target_dir, cdc_qc_file, nn=2, show_digit=3, is_sppol=False):
 		f.write(rho_new_bytes)
 	print(f'{fn_new} generated\n')
 
-	"""
 	### Density visualization
 	rho_dft_roll = np.roll(rho_dft, shift=(N[0]//2, N[1]//2, N[2]//2), axis=(0, 1, 2))[N[0]//2, :, :]
 	rho_new_roll = np.roll(rho_new, shift=(N[0]//2, N[1]//2, N[2]//2), axis=(0, 1, 2))[N[0]//2, :, :]
 	vmin, vmax = rho_new_roll.min(), rho_new_roll.max()
 
 	fig, ax = plt.subplots(1, 2, figsize=(8, 6), constrained_layout=True)
-	im0 = ax[0].imshow(rho_dft_roll, origin='lower', vmin=vmin, vmax=vmax)
-	im1 = ax[1].imshow(rho_new_roll, origin='lower', vmin=vmin, vmax=vmax)
+	im0 = ax[0].imshow(rho_dft_roll[120:150, 120:150], origin='lower', vmin=vmin, vmax=vmax)
+	im1 = ax[1].imshow(rho_new_roll[120:150, 120:150], origin='lower', vmin=vmin, vmax=vmax)
 	ax[0].set_title('rho_dft')
 	ax[1].set_title('rho_new')
-	fig.colorbar(im1, ax=ax, shrink=0.5)
+	fig.colorbar(im1, ax=ax, shrink=0.53)
+	plt.savefig(f'fig/rho_{target_dir.rstrip('/').split('/')[-1]}.svg')
 	plt.show()
-	"""
 
 if args.clean: clean(args.target_dir, args.clean)
 elif args.density: get_density(args.target_dir, args.density)
